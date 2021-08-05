@@ -18,5 +18,15 @@ public class BusinessAcount extends Account {
 			//deposit(amount);
 			balance += amount - 10.0;
 		}
-	}	
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(" " + loamLimit + "\n");
+		return sb.toString();
+		
+				
+	}
+	
 }
