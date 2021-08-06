@@ -2,7 +2,8 @@ package entities;
 
 public class Account {
 	
-	protected Integer number;
+	//Modificadore des acesso private para que esses campos sejam visiveis nas classes especilistas
+	protected Integer number; 
 	protected String holder;
 	protected Double balance;
 	

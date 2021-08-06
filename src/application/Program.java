@@ -23,5 +23,36 @@ public class Program {
 		System.out.println(acc);
 		System.out.println(acc2);
 		System.out.println(acc3);
+		
+		//DOWNCASTING
+		
+		//acc2 é, após o upcasting, um Account
+		//Nesse caso, o downcasting tem que ser manual
+		BusinessAcount acc4 = (BusinessAcount)acc2;
+		acc4.loam(100.0);
+		
+		 /*Aqui, acc3 não é um BusinessAcount, porém o compilador não "sabe". 
+		   O downcasting não aconterá. 
+		   O erro vai aparecer em tempo de execução*/
+		
+		//BusinessAcount acc5 = (BusinessAcount)acc3;
+		
+		/*
+		 * Para resolver esse problema, vamos fazer uso da comando instandeof
+		 * dentro de um laço for
+		 * O isntaceof vai checar se os objetos são do mesmo tipo
+		 * */
+		
+		if (acc3 instanceof BusinessAcount) {
+			BusinessAcount acc5 = (BusinessAcount)acc3;
+			acc5.loam(200.0);
+			System.out.println("Loan!");
+		}
+		
+		if (acc3 instanceof SavingAccount) {
+			SavingAccount acc5 = (SavingAccount)acc3;
+			acc5.updateBalance();
+			System.out.println("Update!");
+		}
 	}
 }	

@@ -26,11 +26,16 @@ public class SavingAccount extends Account {
 	}
 	
 	@Override
-	public String toString() {
-		
-		StringBuilder sb = new StringBuilder();
-		sb.append(" [" + interestRate + "]\n");
-		
-		return sb.toString();
+	public String toString() {		
+			StringBuilder sb = new StringBuilder();
+			sb.append("Conta: ");
+			sb.append(number + "\n");
+			sb.append("Holder: ");
+			sb.append(holder + "\n");
+			sb.append("Balance: ");
+			sb.append(balance + "\n");
+			sb.append("Interes Rate: ");
+			sb.append(interestRate + "\n");
+			return sb.toString();
 	}
 }
