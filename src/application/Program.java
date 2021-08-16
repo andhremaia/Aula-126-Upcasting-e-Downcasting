@@ -16,19 +16,25 @@ public class Program {
 		//A herança é uma relação do tipo "é um"
 		//Por isso a atribuição a seguir é válida já que uma BusinessAccount "é uma" Account
 		
+		//acc = bacc;
 		Account acc1 = bacc;
 		Account acc2 = new BusinessAcount(1003, "Bob", 0.0, 200.0);
 		Account acc3 = new SavingAccount(1004, "Anna", 0.0, 200.0);
 		
 		System.out.println(acc);
-		System.out.println(acc2);
-		System.out.println(acc3);
+		//System.out.println(acc2);
+		//System.out.println(acc3);
 		
 		//DOWNCASTING
 		
-		//acc2 é, após o upcasting, um Account
-		//Nesse caso, o downcasting tem que ser manual
-		BusinessAcount acc4 = (BusinessAcount)acc2;
+		//acc2 foi declarada como Account. Ela é objeto Account independente do que tenha sido colocado
+		//dentro dela. Assim, quando fizermos:
+		//BusinessAcount acc4 = acc2; 
+		//vai dar erro
+		//Portanto, nesse caso, o downcasting tem que ser manual
+		
+
+		BusinessAcount acc4 = (BusinessAcount)acc2; //forma correta de se fazer um downcasting
 		acc4.loam(100.0);
 		
 		 /*Aqui, acc3 não é um BusinessAcount, porém o compilador não "sabe". 
